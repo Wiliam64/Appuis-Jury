@@ -1,4 +1,4 @@
-# Maquetter une application.
+# Maquetter une application.
 
 [Barbershop](https://www.figma.com/file/MU2UC8FOjhAI9YRTAtGAT6/Barbershop?node-id=0%3A1)
 
