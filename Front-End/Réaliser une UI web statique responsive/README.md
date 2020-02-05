@@ -1,4 +1,4 @@
-# Maquetter une application.
+# Réaliser une interface utilisateur statique et adaptable.
 
 [Fiche-Profil](https://wiliam64.github.io/Fiche-Profil/) (dans l'idéal non)
 
