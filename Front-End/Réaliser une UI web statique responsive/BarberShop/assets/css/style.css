@@ -1,0 +1,173 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/BARBER-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #464646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}
+header img{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+header h2, a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+header h1{
+    font-size: 50px;
+}
+
+.images{
+    box-shadow: 6px 12px 39px -7px rgba(0,0,0,0.75);
+    margin: 1.5em;
+}
+
+#blockTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav{
+    position: absolute;
+    bottom: 85%;
+    left: 52%;
+}
+
+nav ul a{
+    margin-left: 0.5em;
+    font-size: large;
+}
+
+header div{
+    transform: rotate(270deg);
+    padding: 1em;
+    margin:none;
+    background-color: red;
+    position: absolute;
+    float: right;
+}
+
+#blockDiscover, #blockOffers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 7em;
+}
+
+#blockDiscover p, #blockDiscover h3{
+    margin-left: 1em;
+}
+#blockDiscover{
+    background-color: rgb(252, 252, 252);
+}
+
+#blockDiscover h3:not(:first-child),#blockOffers h3:not(:first-child){
+    color: #C77948;
+    font-size: 26px;
+}
+#blockDiscover p, #blockOffers p{
+    color: rgb(105, 105, 105);
+}
+#blockOffers div{
+    margin-top: 5vh;
+    margin-left: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 1vh;
+    padding: 1em;
+    background-color: rgb(179, 111, 70);
+    color: white;
+    box-shadow: 6px 12px 39px -7px rgba(0,0,0,0.75);
+}
+
+#blockConcept{
+    background-image: url("../images/BARBER-2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #464646;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#blockConcept div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 1vh;
+    padding: 1em;
+    background-color: rgb(179, 111, 70); 
+}
+#blockConcept p{
+    margin: 6em;
+    text-emphasis: center;
+    font-size: 20px;
+}
+
+#blockContact{
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#blockContact article:first-child{
+    text-align: center;
+}
+
+.upperRed{
+    text-transform: uppercase;
+    color: rgb(179, 111, 70);
+}
+#blockContact article:first-child p{
+    color: rgb(179, 111, 70);
+}
+#blockContact article:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+#form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
