@@ -1,0 +1,119 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Categories
+#------------------------------------------------------------
+
+CREATE TABLE Categories(
+        id_categorie      Int  Auto_increment  NOT NULL ,
+        libelle_categorie Varchar (50) NOT NULL
+	,CONSTRAINT Categories_PK PRIMARY KEY (id_categorie)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Produits
+#------------------------------------------------------------
+
+CREATE TABLE Produits(
+        id_produit      Int  Auto_increment  NOT NULL ,
+        libelle_produit Varchar (50) NOT NULL ,
+        designation     Text NOT NULL ,
+        infos_produits  Varchar (50) NOT NULL ,
+        prix_HT         Float NOT NULL ,
+        disponibilite   Bool NOT NULL ,
+        conditionnement Varchar (50) NOT NULL ,
+        id_categorie    Int NOT NULL
+	,CONSTRAINT Produits_PK PRIMARY KEY (id_produit)
+
+	,CONSTRAINT Produits_Categories_FK FOREIGN KEY (id_categorie) REFERENCES Categories(id_categorie)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Paiement
+#------------------------------------------------------------
+
+CREATE TABLE Paiement(
+        id_paiement Int  Auto_increment  NOT NULL ,
+        num_cb      Varchar (16) NOT NULL ,
+        date_exp    Date NOT NULL ,
+        crypto      Int NOT NULL
+	,CONSTRAINT Paiement_PK PRIMARY KEY (id_paiement)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Client
+#------------------------------------------------------------
+
+CREATE TABLE Client(
+        id_client   Int  Auto_increment  NOT NULL ,
+        nom         Varchar (50) NOT NULL ,
+        prenom      Varchar (50) NOT NULL ,
+        email       Varchar (50) NOT NULL ,
+        password    Varchar (50) NOT NULL ,
+        phone       Varchar (10) NOT NULL ,
+        genre       Bool NOT NULL ,
+        newsletter  Bool NOT NULL ,
+        adresse     Varchar (50) NOT NULL ,
+        ville       Varchar (100) NOT NULL ,
+        code_postal Varchar (50) NOT NULL ,
+        pays        Varchar (50) NOT NULL ,
+        id_paiement Int NOT NULL
+	,CONSTRAINT Client_PK PRIMARY KEY (id_client)
+
+	,CONSTRAINT Client_Paiement_FK FOREIGN KEY (id_paiement) REFERENCES Paiement(id_paiement)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Commandes
+#------------------------------------------------------------
+
+CREATE TABLE Commandes(
+        id_livraison  Int  Auto_increment  NOT NULL ,
+        num_commande  Varchar (50) NOT NULL ,
+        date_commande Date NOT NULL ,
+        id_client     Int NOT NULL
+	,CONSTRAINT Commandes_PK PRIMARY KEY (id_livraison)
+
+	,CONSTRAINT Commandes_Client_FK FOREIGN KEY (id_client) REFERENCES Client(id_client)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: commande_produit
+#------------------------------------------------------------
+
+CREATE TABLE commande_produit(
+        id_produit   Int NOT NULL ,
+        id_livraison Int NOT NULL ,
+        qte          Int NOT NULL ,
+        prix_HT      Float NOT NULL
+	,CONSTRAINT commande_produit_PK PRIMARY KEY (id_produit,id_livraison)
+
+	,CONSTRAINT commande_produit_Produits_FK FOREIGN KEY (id_produit) REFERENCES Produits(id_produit)
+	,CONSTRAINT commande_produit_Commandes0_FK FOREIGN KEY (id_livraison) REFERENCES Commandes(id_livraison)
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Panier
+#------------------------------------------------------------
+
+CREATE TABLE Panier(
+        id_client  Int NOT NULL ,
+        id_produit Int NOT NULL ,
+        qte        Int NOT NULL ,
+        prix_HT    Float NOT NULL
+	,CONSTRAINT Panier_PK PRIMARY KEY (id_client,id_produit)
+
+	,CONSTRAINT Panier_Client_FK FOREIGN KEY (id_client) REFERENCES Client(id_client)
+	,CONSTRAINT Panier_Produits0_FK FOREIGN KEY (id_produit) REFERENCES Produits(id_produit)
+)ENGINE=InnoDB;
+
+

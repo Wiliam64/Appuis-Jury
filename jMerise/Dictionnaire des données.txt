@@ -1,0 +1,230 @@
+Dictionnaire de données 
+
+Nom : id_client
+Code : ID_CLIENT
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : nom
+Code : NOM
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : prenom
+Code : PRENOM
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : email
+Code : EMAIL
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : phone
+Code : PHONE
+Type : VARCHAR
+Taille : 10,
+Commentaire : 
+
+Nom : password
+Code : PASSWORD
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : genre
+Code : GENRE
+Type : BOOL
+Taille : ,
+Commentaire : 
+
+Nom : id_adresse
+Code : ID_ADRESSE
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : adresse
+Code : ADRESSE
+Type : VARCHAR
+Taille : 100,
+Commentaire : 
+
+Nom : code_postal
+Code : CODE_POSTAL
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : ville
+Code : VILLE
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : pays
+Code : PAYS
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : id_produit
+Code : ID_PRODUIT
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : libelle_produit
+Code : LIBELLE_PRODUIT
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : designation
+Code : DESIGNATION
+Type : TEXT
+Taille : 50,
+Commentaire : 
+
+Nom : infos_produits
+Code : INFOS_PRODUITS
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : prix_HT
+Code : PRIX_HT
+Type : FLOAT
+Taille : ,
+Commentaire : 
+
+Nom : disponibilte
+Code : DISPONIBILTE
+Type : BOOL
+Taille : ,
+Commentaire : 
+
+Nom : id_categorie
+Code : ID_CATEGORIE
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : libelle_cat
+Code : LIBELLE_CAT
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : id_type
+Code : ID_TYPE
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : libelle_type
+Code : LIBELLE_TYPE
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : id_paiement
+Code : ID_PAIEMENT
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : num_cb
+Code : NUM_CB
+Type : VARCHAR
+Taille : 16,
+Commentaire : 
+
+Nom : date_exp
+Code : DATE_EXP
+Type : DATE
+Taille : ,
+Commentaire : 
+
+Nom : crypto
+Code : CRYPTO
+Type : INT
+Taille : 3,
+Commentaire : 
+
+Nom : id_panier
+Code : ID_PANIER
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : qte
+Code : QTE
+Type : INT
+Taille : ,
+Commentaire : 
+
+Nom : total
+Code : TOTAL
+Type : FLOAT
+Taille : ,
+Commentaire : 
+
+Nom : id_livraison
+Code : ID_LIVRAISON
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : type
+Code : TYPE
+Type : BOOL
+Taille : ,
+Commentaire : 
+
+Nom : newsletter
+Code : NEWSLETTER
+Type : BOOL
+Taille : ,
+Commentaire : 
+
+Nom : conditionnement
+Code : CONDITIONNEMENT
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : num_livraison
+Code : NUM_LIVRAISON
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : num_commande
+Code : NUM_COMMANDE
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : date_commande
+Code : DATE_COMMANDE
+Type : DATE
+Taille : ,
+Commentaire : 
+
+Nom : libelle_categorie
+Code : LIBELLE_CATEGORIE
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : disponibilite
+Code : DISPONIBILITE
+Type : BOOL
+Taille : ,
+Commentaire : 
+
